@@ -1,11 +1,10 @@
 import './style.css'
+import React from 'react'
 import {createRoot} from 'react-dom/client'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-// import { setupCounter } from './counter.ts'
-import D3Visualization from './d3Visualization.tsx'
-
+import D3Visualization from './d3Visualization'
 /*
+import { setupCounter } from './counter.ts'
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">

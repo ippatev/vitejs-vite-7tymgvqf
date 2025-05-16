@@ -1,7 +1,7 @@
-import './style.css'
-import React from 'react'
-import {createRoot} from 'react-dom/client'
-import D3Visualization from './d3Visualization'
+import "./style.css";
+import React, { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import D3Visualization from "./d3Visualization";
 /*
 import { setupCounter } from './counter.ts'
 
@@ -24,15 +24,18 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 */
 
-const domNode = document.getElementById('app')
+const domNode = document.getElementById("app");
 
-if(domNode) {
-  const root = createRoot(domNode)
+if (domNode) {
+  const root = createRoot(domNode);
 
-  root.render(<D3Visualization />);
+  root.render(
+    <StrictMode>
+      <D3Visualization />
+    </StrictMode>,
+  );
 } else {
-  console.error('Failed to find the app element in the DOM.')
+  console.error("Failed to find the app element in the DOM.");
 }
-
 
 /* setupCounter(document.querySelector<HTMLButtonElement>('#counter')!) */

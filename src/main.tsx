@@ -1,8 +1,11 @@
 import './style.css'
+import {createRoot} from 'react-dom/client'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+// import { setupCounter } from './counter.ts'
+import D3Visualization from './d3Visualization.tsx'
 
+/*
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
@@ -20,5 +23,17 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </p>
   </div>
 `
+*/
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+const domNode = document.getElementById('app')
+
+if(domNode) {
+  const root = createRoot(domNode)
+
+  root.render(<D3Visualization />);
+} else {
+  console.error('Failed to find the app element in the DOM.')
+}
+
+
+/* setupCounter(document.querySelector<HTMLButtonElement>('#counter')!) */
